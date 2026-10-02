@@ -5,7 +5,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Transport Service - Vehicle Number Plate Solutions</title>
-  <meta name="description" content="Official vehicle transport solutions and Plate booking services." />
+  <meta name="description" content="Vehicle transport assistance and HSRP number plate booking information." />
 
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
@@ -94,21 +94,21 @@
       background: var(--card);
       border: 1px solid var(--border);
       border-radius: var(--radius);
-      padding: 24px;
+      padding: 16px;
       box-shadow: var(--shadow);
       height: 100%;
     }
 
     .icon-bubble {
-      width: 44px;
-      height: 44px;
-      border-radius: 14px;
+      width: 38px;
+      height: 38px;
+      border-radius: 12px;
       display: grid;
       place-items: center;
       background: linear-gradient(135deg, rgba(13, 110, 253, .12), rgba(10, 162, 192, .12));
       border: 1px solid rgba(13, 110, 253, .18);
       font-weight: 950;
-      color: var(--ink);
+      flex: 0 0 auto;
     }
 
     .service-title {
@@ -118,8 +118,9 @@
 
     .mini {
       color: var(--muted);
-      font-weight: 650;
+      font-weight: 600;
       margin: 0;
+      line-height: 1.5;
     }
 
     .step {
@@ -144,8 +145,8 @@
     .quote {
       background: linear-gradient(90deg, rgba(13, 110, 253, .10), rgba(10, 162, 192, .10));
       border: 1px solid rgba(13, 110, 253, .15);
-      border-radius: 24px;
-      padding: 24px;
+      border-radius: 20px;
+      padding: 18px;
       box-shadow: var(--shadow);
       display: flex;
       align-items: center;
@@ -162,7 +163,7 @@
     .quote p {
       margin: 0;
       color: var(--muted);
-      font-weight: 700;
+      font-weight: 650;
     }
 
     .footer {
@@ -188,130 +189,60 @@
       font-weight: 650;
     }
 
-    /* ================= SERVICE STRIP ================= */
+    /* SERVICE BOXES - MATCHING REFERENCE PHOTO */
 
     .service-strip {
-      background: linear-gradient(135deg, #0b1220 0%, #173b72 55%, #0aa2c0 100%);
-      border-radius: 24px;
-      padding: 30px 24px;
-      box-shadow: 0 18px 45px rgba(2, 6, 23, .14);
+      background: linear-gradient(110deg, #244de2 0%, #1686e8 55%, #10a9dc 100%);
+      border-radius: 20px;
+      padding: 20px;
+      box-shadow: 0 18px 45px rgba(2, 6, 23, .12);
       overflow: hidden;
-      margin-bottom: 30px;
-      position: relative;
-    }
-
-    .service-strip::before {
-      content: "";
-      position: absolute;
-      width: 280px;
-      height: 280px;
-      right: -120px;
-      top: -160px;
-      border-radius: 50%;
-      background: rgba(255,255,255,.10);
-    }
-
-    .service-strip .row {
-      position: relative;
-      z-index: 2;
+      margin-bottom: 26px;
     }
 
     .service-tile {
-      border-radius: 20px;
-      padding: 26px;
+      border-radius: 14px;
+      padding: 20px;
       height: 100%;
-      min-height: 160px;
+      min-height: 150px;
       display: flex;
       flex-direction: column;
+      align-items: flex-start;
       justify-content: space-between;
       border: 1px solid rgba(2, 6, 23, .08);
-      box-shadow: 0 12px 28px rgba(2, 6, 23, .10);
-      position: relative;
-      overflow: hidden;
-      transition: transform .25s ease, box-shadow .25s ease;
-    }
-
-    .service-tile::after {
-      content: "";
-      position: absolute;
-      width: 100px;
-      height: 100px;
-      right: -35px;
-      top: -35px;
-      border-radius: 50%;
-      background: rgba(255,255,255,.18);
+      box-shadow: 0 8px 20px rgba(2, 6, 23, .08);
+      transition: transform .2s ease;
     }
 
     .service-tile:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 20px 42px rgba(2, 6, 23, .20);
+      transform: translateY(-3px);
     }
 
     .service-tile.light {
-      background: linear-gradient(145deg, #fff7c2, #fde68a);
-      color: #0b1220;
+      background: #ffe58b;
+      color: #171717;
     }
 
     .service-tile.dark {
-      background: linear-gradient(145deg, #334b8a, #172554);
+      background: #303f7c;
       color: #fff;
-      border-color: rgba(255,255,255,.12);
-    }
-
-    .service-tile.blue {
-      background: linear-gradient(145deg, #dbeafe, #93c5fd);
-      color: #0b1220;
-    }
-
-    .service-tile.green {
-      background: linear-gradient(145deg, #d9f99d, #86efac);
-      color: #0b1220;
-    }
-
-    .service-tile.cyan {
-      background: linear-gradient(145deg, #cffafe, #67e8f9);
-      color: #0b1220;
-    }
-
-    .service-icon {
-      font-size: 34px;
-      line-height: 1;
-      margin-bottom: 12px;
-      position: relative;
-      z-index: 2;
+      border-color: rgba(255, 255, 255, .12);
     }
 
     .service-tile h3 {
-      margin: 0 0 16px;
-      font-weight: 950;
+      margin: 0 0 14px;
+      font-weight: 850;
       letter-spacing: -.01em;
-      font-size: 20px;
-      position: relative;
-      z-index: 2;
+      font-size: 19px;
+      line-height: 1.3;
     }
 
     .service-tile .btn {
       width: fit-content;
-      border-radius: 12px;
-      font-weight: 900;
-      padding: 10px 14px;
-      position: relative;
-      z-index: 3;
-    }
-
-    .service-badge {
-      display: inline-flex;
-      align-items: center;
-      width: fit-content;
-      font-size: 11px;
-      font-weight: 850;
-      letter-spacing: .04em;
-      padding: 5px 10px;
-      border-radius: 999px;
-      background: rgba(255,255,255,.62);
-      margin-bottom: 10px;
-      position: relative;
-      z-index: 3;
+      border-radius: 9px;
+      font-weight: 800;
+      padding: 8px 12px;
+      font-size: 13px;
     }
 
     .flag-section {
@@ -325,7 +256,6 @@
       max-width: 1200px;
       height: auto;
       border-radius: 6px;
-      box-shadow: 0 18px 40px rgba(2, 6, 23, .15);
       object-fit: cover;
     }
 
@@ -335,29 +265,68 @@
       margin: 15px 0;
     }
 
-    @media(max-width:576px) {
+    .booking-link {
+      color: #1672dc;
+      font-weight: 850;
+      font-size: 28px;
+      line-height: 1.3;
+      text-decoration: underline;
+      display: inline-block;
+      margin-bottom: 8px;
+    }
 
-      .flag-section img {
-        height: auto;
-      }
+    .booking-link:hover {
+      color: #084298;
+    }
 
-      .quote {
-        justify-content: center;
-        text-align: center;
-      }
+    .book-now-area {
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 14px;
+      margin-top: 2px;
+      box-shadow: 0 5px 15px rgba(2, 6, 23, .04);
+    }
 
+    .book-now-btn {
+      background: #212529;
+      color: #fff;
+      border: none;
+      border-radius: 7px;
+      padding: 9px 20px;
+      font-weight: 750;
+      font-size: 14px;
+      text-decoration: none;
+      display: inline-block;
+    }
+
+    .book-now-btn:hover {
+      background: #343a40;
+      color: #fff;
+    }
+
+    @media(max-width: 576px) {
       .service-strip {
-        padding: 22px 16px;
-        border-radius: 20px;
+        padding: 16px;
+        border-radius: 18px;
       }
 
       .service-tile {
         min-height: 145px;
-        padding: 22px;
+        padding: 18px;
       }
 
-      .service-icon {
-        font-size: 30px;
+      .service-tile h3 {
+        font-size: 18px;
+      }
+
+      .booking-link {
+        font-size: 25px;
+      }
+
+      .quote {
+        justify-content: flex-start;
+        text-align: left;
       }
     }
   </style>
@@ -365,17 +334,20 @@
 
 <body>
 
-  <!-- ================= NAVBAR ================= -->
+  <!-- NAVBAR -->
 
   <nav class="navbar navbar-expand-lg navbar-light nav-glass">
     <div class="container">
 
       <a class="navbar-brand" href="index.html">
         <span class="brand-badge">IN</span>
-        <span>Transport Hub</span>
+        <span>Transportinfo</span>
       </a>
 
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar">
+      <button class="navbar-toggler" type="button"
+        data-bs-toggle="collapse" data-bs-target="#mainNavbar"
+        aria-controls="mainNavbar" aria-expanded="false"
+        aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
 
@@ -406,24 +378,23 @@
           </li>
 
         </ul>
-
       </div>
     </div>
   </nav>
 
 
-  <!-- ================= HERO / BANNER ================= -->
+  <!-- HERO / BANNER -->
 
   <section class="flag-section" id="services">
-
-    <img src="images/advertisement_Test.jpg"
-         alt="Number Plate"
-         title="Number Plate">
-
+    <div class="container">
+      <img src="images/advertisement_Test.jpg"
+        alt="Number Plate"
+        title="Number Plate">
+    </div>
   </section>
 
 
-  <!-- ================= SERVICES ================= -->
+  <!-- SERVICES -->
 
   <div class="container mt-4">
 
@@ -431,376 +402,167 @@
 
       <div class="row g-3">
 
-        <!-- Two Wheeler -->
+        <!-- TWO WHEELER -->
 
-        <div class="col-lg-4 col-md-6">
-
+        <div class="col-lg-6 col-md-6">
           <div class="service-tile light">
 
             <div>
-
-              <div class="service-icon">
-                
-              </div>
-
               <h3>
-                Two Wheeler
+                Two Wheeler Number Plate with Colour Sticker
               </h3>
-
             </div>
 
-            <a href="enquiry.html"
-               class="btn btn-outline-dark">
-              Book Now→
+            <a href="enquiry.html" class="btn btn-outline-dark">
+              Bookmy H.S.R.P
             </a>
 
           </div>
-
         </div>
 
 
-        <!-- Replacement / Retain / Transfer -->
+        <!-- REPLACEMENT / RETAIN / TRANSFER -->
 
-        <div class="col-lg-4 col-md-6">
-
+        <div class="col-lg-6 col-md-6">
           <div class="service-tile dark">
 
             <div>
-
-              <div class="service-icon">
-                🔄
-              </div>
-
               <h3>
-                Replacement / Retain / Transfer
+                Replacement / Retain / Tractor/ Auto, truck
               </h3>
-
             </div>
 
-            <a href="enquiry.html"
-               class="btn btn-outline-light">
-              Book Now→
+            <a href="enquiry.html" class="btn btn-outline-light">
+              BookMy H.S.R.P
             </a>
 
           </div>
-
         </div>
 
 
-        <!-- Four Wheeler -->
+        <!-- FOUR WHEELER -->
 
-        <div class="col-lg-4 col-md-6">
-
+        <div class="col-lg-6 col-md-6">
           <div class="service-tile light">
 
             <div>
-
-              <div class="service-icon">
-                
-              </div>
-
               <h3>
-                Four Wheeler
+                Four Wheeler Number Plate with Colour Sticker
               </h3>
-
             </div>
 
-            <a href="enquiry.html"
-               class="btn btn-outline-dark">
-              Book Now→
+            <a href="enquiry.html" class="btn btn-outline-dark">
+              BookMy H.S.R.P
             </a>
 
           </div>
-
-        </div>
-
-
-        <!-- Colour Sticker -->
-
-        <div class="col-lg-4 col-md-6">
-
-          <div class="service-tile blue">
-
-            <div>
-
-              <span class="service-badge">
-                SPECIAL SERVICE
-              </span>
-
-              <div class="service-icon">
-                
-              </div>
-
-              <h3>
-                Colour Sticker
-              </h3>
-
-            </div>
-
-            <a href="enquiry.html"
-               class="btn btn-outline-dark">
-              Book Now→
-            </a>
-
-          </div>
-
-        </div>
-
-
-        <!-- Heavy Vehicle -->
-
-        <div class="col-lg-4 col-md-6">
-
-          <div class="service-tile green">
-
-            <div>
-
-              <span class="service-badge">
-                COMMERCIAL
-              </span>
-
-              <div class="service-icon">
-                
-              </div>
-
-              <h3>
-                Heavy Vehicle
-              </h3>
-
-            </div>
-
-            <a href="enquiry.html"
-               class="btn btn-outline-dark">
-              Book Now→
-            </a>
-
-          </div>
-
-        </div>
-
-
-        <!-- Electric Vehicle -->
-
-        <div class="col-lg-4 col-md-6">
-
-          <div class="service-tile cyan">
-
-            <div>
-
-              <span class="service-badge">
-                ECO FRIENDLY
-              </span>
-
-              <div class="service-icon">
-                
-              </div>
-
-              <h3>
-                Electric Vehicle
-              </h3>
-
-            </div>
-
-            <a href="enquiry.html"
-               class="btn btn-outline-dark">
-              Book Now→
-            </a>
-
-          </div>
-
         </div>
 
       </div>
-
     </div>
 
-  </div>
 
+    <!-- HSRP INFORMATION -->
 
-  <!-- ================= HOW IT WORKS ================= -->
-
-  <section class="section" id="how">
-
-    <div class="container">
+    <section class="pb-3">
 
       <h2 class="section-title">
-        How it works
+        Reliable Transport Service for HSRP Number plate
       </h2>
 
-      <p class="section-sub">
-        Simple steps. No confusion. We keep you updated.
+      <p class="mini mb-3">
+        Finding a reliable transport service for HSRP number plate
+        requirements can make the booking and fitment process easier
+        and more convenient. High Security Registration Plates (HSRP)
+        are designed with security features and are installed using
+        tamper-resistant fittings. Depending on the state and vehicle,
+        owners may need to book an appointment through an authorized
+        HSRP service provider and visit the designated fitment location.
+        Our HSRP transport service is focused on providing convenient
+        travel assistance for customers who need to visit an authorized
+        HSRP fitment center. Whether you need support for a two-wheeler,
+        car, commercial vehicle, or other eligible vehicle, our transport
+        assistance can help make your journey more organized and comfortable.
+      </p>
+
+      <p class="mini mb-3">
+        Background and purpose To Book My Number Plate
+      </p>
+
+
+      <div class="card-soft">
+
+        <div class="step">
+
+          <div class="step-num">1</div>
+
+          <div>
+            <h6 class="fw-bold mb-1">
+              HSRP Booking and Transport Assistance
+            </h6>
+
+            <p class="mini">
+              Before travelling for HSRP fitment, vehicle owners should
+              complete the applicable booking process and confirm their
+              appointment details. HSRP booking portals may require vehicle
+              registration information, chassis and engine details, contact
+              information, and other applicable details. Our service can
+              assist customers with transportation to and from the applicable
+              HSRP fitment location. We aim to provide timely, convenient,
+              and customer-focused transport assistance so you can attend
+              your scheduled appointment without unnecessary travel difficulties.
+            </p>
+
+          </div>
+        </div>
+
+        <div class="book-now-area">
+          <a href="enquiry.html" class="book-now-btn">
+            Book Now →
+          </a>
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- BOOK MY TRANSPORT NUMBER PLATE -->
+
+    <section class="pb-4" id="reviews">
+
+      <a href="enquiry.html" class="booking-link">
+        Book My Transport Number plate
+      </a>
+
+      <p class="mini mb-3">
+        Strong materials, safe handling, and clean packing—so your items
+        reach without damage.
       </p>
 
 
       <div class="row g-3">
 
-        <!-- Step 1 -->
+        <!-- BOOKING ASSISTANCE -->
 
-        <div class="col-lg-4">
-
-          <div class="card-soft">
-
-            <div class="step">
-
-              <div class="step-num">
-                1
-              </div>
-
-              <div>
-
-                <h6 class="fw-bold mb-1">
-                  Share details
-                </h6>
-
-                <p class="mini">
-                  Pickup, drop, date and item type
-                  (home/office/bike/car).
-                </p>
-
-              </div>
-
-            </div>
-
-          </div>
-
-        </div>
-
-
-        <!-- Step 2 -->
-
-        <div class="col-lg-4">
-
-          <div class="card-soft">
-
-            <div class="step">
-
-              <div class="step-num">
-                2
-              </div>
-
-              <div>
-
-                <h6 class="fw-bold mb-1">
-                  Get best quote
-                </h6>
-
-                <p class="mini">
-                  We confirm vehicle, packing requirement
-                  and pricing.
-                </p>
-
-              </div>
-
-            </div>
-
-          </div>
-
-        </div>
-
-
-        <!-- Step 3 -->
-
-        <div class="col-lg-4">
-
-          <div class="card-soft">
-
-            <div class="step">
-
-              <div class="step-num">
-                3
-              </div>
-
-              <div>
-
-                <h6 class="fw-bold mb-1">
-                  Pickup & delivery
-                </h6>
-
-                <p class="mini">
-                  Our team packs, loads and delivers on time.
-                </p>
-
-              </div>
-
-            </div>
-
-          </div>
-
-        </div>
-
-      </div>
-
-
-      <div class="quote mt-4">
-
-        <div>
-
-          <h4>
-            Need a quick call back?
-          </h4>
-
-          <p>
-            Click below and share your pickup/drop details.
-            We’ll respond fast.
-          </p>
-
-        </div>
-
-        <a class="btn btn-dark fw-bold px-4 py-2"
-           style="border-radius:12px;"
-           href="enquiry.html">
-          Book Now →
-        </a>
-
-      </div>
-
-    </div>
-
-  </section>
-
-
-  <!-- ================= DETAILS / PACKING ================= -->
-
-  <section class="section" id="reviews">
-
-    <div class="container">
-
-      <h1 class="section-title">
-        Transport Service
-      </h1>
-
-      <p class="section-sub">
-        Strong materials, safe handling, and clean packing—
-        so your items reach without damage.
-      </p>
-
-
-      <div class="row g-3">
-
-
-        <!-- Quality Packing -->
-
-        <div class="col-lg-4">
+        <div class="col-12">
 
           <div class="card-soft">
 
             <div class="d-flex align-items-center gap-2">
 
-              <div class="icon-bubble">
-                📦
-              </div>
+              <div class="icon-bubble">📦</div>
 
               <div>
-
-                <h5 class="service-title mb-0">
-                  Quality packing materials
-                </h5>
+                <h6 class="fw-bold mb-0">
+                  Booking Assistance
+                </h6>
 
                 <p class="mini">
-                  5-ply cartons, bubble wrap, foam,
-                  stretch film, and corrugated sheets.
+                  Our booking assistance is designed to help customers
+                  understand the service process and make suitable
+                  transportation arrangements.
                 </p>
-
               </div>
 
             </div>
@@ -808,19 +570,9 @@
             <hr class="hr-soft">
 
             <ul class="mini" style="padding-left:18px;">
-
-              <li>
-                Separate packing for fragile items
-              </li>
-
-              <li>
-                Moisture & dust protection
-              </li>
-
-              <li>
-                Labeling for easy unloading
-              </li>
-
+              <li>Separate packing for fragile items</li>
+              <li>Moisture &amp; dust protection</li>
+              <li>Labeling for easy unloading</li>
             </ul>
 
           </div>
@@ -828,29 +580,24 @@
         </div>
 
 
-        <!-- Products & Appliances -->
+        <!-- PRODUCTS AND APPLIANCES -->
 
-        <div class="col-lg-4">
+        <div class="col-12">
 
           <div class="card-soft">
 
             <div class="d-flex align-items-center gap-2">
 
-              <div class="icon-bubble">
-                🛋️
-              </div>
+              <div class="icon-bubble">🛋️</div>
 
               <div>
-
-                <h5 class="service-title mb-0">
-                  Your product & appliances
-                </h5>
+                <h6 class="fw-bold mb-0">
+                  Your product &amp; appliances
+                </h6>
 
                 <p class="mini">
-                  Dismantle, wrap, and secure your large
-                  items for transport.
+                  Dismantle, wrap, and secure your large items for transport.
                 </p>
-
               </div>
 
             </div>
@@ -858,19 +605,9 @@
             <hr class="hr-soft">
 
             <ul class="mini" style="padding-left:18px;">
-
-              <li>
-                Corner guards & edge protection
-              </li>
-
-              <li>
-                Anti-scratch wrapping
-              </li>
-
-              <li>
-                Safe loading with straps
-              </li>
-
+              <li>Corner guards &amp; edge protection</li>
+              <li>Anti-scratch wrapping</li>
+              <li>Safe loading with straps</li>
             </ul>
 
           </div>
@@ -878,29 +615,24 @@
         </div>
 
 
-        <!-- Damage Safe -->
+        <!-- DAMAGE-SAFE PROCESS -->
 
-        <div class="col-lg-4">
+        <div class="col-12">
 
           <div class="card-soft">
 
             <div class="d-flex align-items-center gap-2">
 
-              <div class="icon-bubble">
-                ✅
-              </div>
+              <div class="icon-bubble">✅</div>
 
               <div>
-
-                <h5 class="service-title mb-0">
+                <h6 class="fw-bold mb-0">
                   Damage-safe process
-                </h5>
+                </h6>
 
                 <p class="mini">
-                  Step-by-step packing with checks before
-                  dispatch & delivery.
+                  Step-by-step packing with checks before dispatch &amp; delivery.
                 </p>
-
               </div>
 
             </div>
@@ -908,19 +640,9 @@
             <hr class="hr-soft">
 
             <ul class="mini" style="padding-left:18px;">
-
-              <li>
-                Item checklist & verification
-              </li>
-
-              <li>
-                Sealed cartons for security
-              </li>
-
-              <li>
-                Unpacking support on request
-              </li>
-
+              <li>Item checklist &amp; verification</li>
+              <li>Sealed cartons for security</li>
+              <li>Unpacking support on request</li>
             </ul>
 
           </div>
@@ -930,35 +652,31 @@
       </div>
 
 
-      <div class="quote mt-4">
+      <!-- DELIVERY ONLY -->
+
+      <div class="quote mt-3">
 
         <div>
-
-          <h4>
-            Want delivery only?
-          </h4>
+          <h4>Want delivery only?</h4>
 
           <p>
             Share your item list and delivery location.
             We’ll arrange unpacking at your place.
           </p>
-
         </div>
 
-        <a class="btn btn-dark fw-bold px-4 py-2"
-           style="border-radius:12px;"
-           href="enquiry.html">
-          Get Packing Quote →
+        <a class="book-now-btn" href="enquiry.html">
+          Book Now →
         </a>
 
       </div>
 
-    </div>
+    </section>
 
-  </section>
+  </div>
 
 
-  <!-- ================= FOOTER ================= -->
+  <!-- FOOTER -->
 
   <footer class="footer" id="contact">
 
@@ -966,25 +684,20 @@
 
       <div class="row g-3 align-items-center">
 
-
         <div class="col-lg-6">
 
           <div class="d-flex align-items-center gap-2">
 
-            <span class="brand-badge">
-              PM
-            </span>
+            <span class="brand-badge">PM</span>
 
             <div>
-
               <div class="fw-bold">
-                Transport Service
+                transportinfo
               </div>
 
               <div class="small-muted">
-                Serving • Safe & reliable relocation
+                Serving • Safe &amp; reliable relocation
               </div>
-
             </div>
 
           </div>
@@ -996,21 +709,13 @@
 
           <div class="d-flex flex-wrap gap-3 justify-content-lg-end">
 
-            <a href="#services">
-              Services
-            </a>
+            <a href="#services">Services</a>
 
-            <a href="#how">
-              How it works
-            </a>
+            <a href="#how">How it works</a>
 
-            <a href="#reviews">
-              Reviews
-            </a>
+            <a href="#reviews">Reviews</a>
 
-            <a href="#contact">
-              Contact
-            </a>
+            <a href="#contact">Contact</a>
 
             <a href="enquiry.html" class="fw-bold">
               Get a Quote
@@ -1022,5 +727,23 @@
 
       </div>
 
+      <hr style="border-top:1px solid rgba(255,255,255,.12);"
+        class="my-3" />
 
-    
+      <div class="d-flex flex-wrap justify-content-between gap-2 small-muted">
+
+        <span>
+          © 2026 Transportinfo. All rights reserved.
+        </span>
+
+      </div>
+
+    </div>
+
+  </footer>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
